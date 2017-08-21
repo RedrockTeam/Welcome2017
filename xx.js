@@ -1,13 +1,16 @@
 // 加载动画
 if ($('#loading')) {
 	setTimeout(function() {
+		$('#loading').css({
+			display: 'none'
+		})
 		$('#loading').remove();
 	}, 5500)
 }
 
-$(window).on('scroll.elasticity', e => {
+$(window).on('scroll.elasticity', function(e) {
     e.preventDefault()
-}).on('touchmove.elasticity', e => {
+}).on('touchmove.elasticity', function(e) {
     e.preventDefault()
 })
 
