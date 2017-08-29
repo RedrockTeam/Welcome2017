@@ -75,12 +75,12 @@ $('#lc-loading').hide(100);
 setInterval(function() {
 	// 开学当日时间
 	var x = new Date(),
-		startDate = 12, //9月该日零时开学
+		startDate = 13, //9月该日零时开学, 9月14:00:00开学
 		list = [2.33, 11.7, 21.05, 30.4, 39.8, 49.2, 58.55, 68, 77.4, 87];
 	var seconds = 59 - x.getSeconds(),
 		minutes = 59 - x.getMinutes(),
 		hours = 23 - x.getHours(),
-		days = x.getMonth()==7?(startDate + 30)-x.getDate():(startDate - 1)-x.getDate();
+		days = x.getMonth()==7 ? (startDate + 30)-x.getDate() : (startDate - 1)-x.getDate();
 	if(days < 0) {
 		seconds = 0;
 		minutes = 0;
